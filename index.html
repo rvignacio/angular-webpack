@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!--
+        Styles.css is the webpack output file that contains all the CSS code.
+        This file is created with the extract-text-webpack-plugin.
+     -->
+    <link rel="stylesheet" href="/styles.css" media="screen" type="text/css">
+
+    <base href="/" />
+</head>
+<body>
+    <div ng-app="DashboardApp">
+        <ng-view/>
+    </div>
+
+    <!-- Bundle.js is the webpack output file that contains all the JS code. -->
+    <script src="/bundle.js"></script>
+</body>
+</html>
