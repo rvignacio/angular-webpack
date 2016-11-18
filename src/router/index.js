@@ -1,12 +1,13 @@
 import Angular from 'angular';
 import 'angular-route';
-
 import Dashboard from '../dashboard';
+import Login from '../login';
+
 
 let Module = Angular.module('Router', [
     'ngRoute',
-
-    Dashboard
+    Dashboard,
+    Login
 ]);
 
 Module.config(($locationProvider, $routeProvider) => {
@@ -19,7 +20,14 @@ Module.config(($locationProvider, $routeProvider) => {
         template: '<dashboard/>'
     });
 
+    $routeProvider.when('/login', {
+        template: '<login/>'
+    });
+
+    $routeProvider.otherwise('/');
+
     return;
 });
 
 export default Module.name;
+
